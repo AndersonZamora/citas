@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #274494;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --padding-bottom-image: 23%;
+  --color-title-1: #FFB3C6;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-start-rgb))
+      )
+      rgb(var(--background-end-rgb))
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+} 
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fade-in {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded transition-all;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded transition-all;
+}
+
+.btn-error {
+  @apply bg-red-600 hover:bg-gray-300 text-white py-0 px-2 rounded transition-all;
+}
+
+.btn-disabled {
+  @apply bg-gray-600 text-white py-2 px-4 rounded transition-all;
+}
+
+.title-1 {
+  @apply text-3xl font-bold text-blue-700
+}
+
+.text-color-1 {
+  color: var(--color-title-1);
+}
+
+.lazyloaded {
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+ul {
+  list-style: unset
+}
+
+.text-mult {
+  padding: 15px
+}
+.tiptap {
+  :first-child {
+    margin-top: 0;
+  }
+
+  ul, 
+  ol {
+    
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+    
+    li p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+}
+
+.image-container {
+  
+
+  width: 100%;
+  /* O cualquier tamaño deseado */
+  height: 0;
+  padding-bottom: var(--padding-bottom-image);
+  animation: fadeIn;
+  animation-duration: 1s;
+  background-size: contain;
+  background-image: url('/imgs/portada.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
