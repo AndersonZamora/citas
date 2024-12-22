@@ -9,10 +9,10 @@ export const ContentServices = () => {
         <ItemListHor />
       </div>
       <div className="col-span-1 sm:col-span-2 md:col-span-1 hidden md:block">
-      <ItemList />
+        <ItemList />
       </div>
       <div className="px-4 md:px-0 col-span-1 sm:col-span-2 md:col-span-3 block">
-        <CardInfo/>
+        <CardInfo />
       </div>
     </div>
   )
